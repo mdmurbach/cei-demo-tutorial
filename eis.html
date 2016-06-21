@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css" media="screen">
+        
+/* Small size */
+@media only screen and (max-width: 630px) {
+    .wave {
+      fill: none;
+      stroke: black;
+    }
+
+    .filler {
+        fill: white;
+    }
+
+    .slider {
+        width: 75vw;
+    }
+
+    section#input {
+        width: 90%;
+        padding: 20px;
+        margin: auto;
+    }
+
+    section#impedance {
+        width: 90%;
+        padding: 20px;
+        margin: auto;
+    }
+    
+    div#input_wave {
+        max-width: 90%;
+        overflow: hidden;
+    }
+}
+
+/* Desktop Size */
+@media only screen and (min-width: 631px) {
+    .wave {
+      fill: none;
+      stroke: black;
+    }
+
+    .filler {
+        fill: white;
+    }
+
+    .slider {
+        width: 25vw;
+    }
+
+    section#input {
+        width: 40%;
+        padding: 20px;
+        float: left;
+    }
+
+    section#impedance {
+        width: 40%;
+        margin-left: 40%;
+        padding: 20px;
+    }
+}
+
+
+</style>
+<link rel="stylesheet" href="css/d3.slider.css" />
+<script type="text/javascript" src="./d3/d3.js"></script>
+<script type="text/javascript" src="./scripts/d3.slider.js"></script>
+</head>
+<body>
+
+<section id="input">
+    <p>Input Amplitude (A)</p>
+    <div class="slider" id="amp_slider"></div>
+    <br></br>
+    <p>Input Frequency (Hz)</p>
+    <div class="slider" id="freq_slider"></div>
+    <br></br>
+    <div id="input_wave"></div>
+</section>
+
+<section id="impedance">
+    <p>Linear Impedance Response</p>
+    <div id="nyquist11"></div>
+</section>
+    
+<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.js"></script>
+<script src="./scripts/draw_input.js"></script>
+<script>
+draw_input();
+
+
+</script>
+</body>
+</html>
